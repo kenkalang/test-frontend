@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: klinik-pintar
+    restart: always
+    ports:
+      - 5173:5173
+    volumes:
+      - /app/node_modules
